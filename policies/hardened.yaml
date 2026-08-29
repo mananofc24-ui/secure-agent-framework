@@ -1,0 +1,25 @@
+agent_name: northwind-it-agent
+default_allow: false
+tools:
+  read_document:
+    tool_name: read_document
+    allowed: true
+    resources:
+      - support_docs
+    approval_required: false
+    resource_path_allowlist:
+      - document:support_
+  create_ticket:
+    tool_name: create_ticket
+    allowed: true
+    resources:
+      - service_tickets
+    approval_required: true
+    resource_path_allowlist:
+      - service_tickets
+  query_asset_inventory:
+    tool_name: query_asset_inventory
+    allowed: false
+    resources: []
+    approval_required: false
+    resource_path_allowlist: []
